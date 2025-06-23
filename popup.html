@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 10px;
+        width: 250px;
+      }
+      #loading {
+        display: none;
+        text-align: center;
+      }
+      .spinner {
+        margin: 10px auto;
+        width: 30px;
+        height: 30px;
+        border: 4px solid #ccc;
+        border-top-color: #007bff;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Toucan LLM</h3>
+    <textarea id="inputText" rows="3" style="width: 100%"></textarea>
+    <button id="translateBtn">Translate</button>
+    <div id="loading"><div class="spinner"></div></div>
+    <div id="output" style="margin-top: 10px"></div>
+    <script src="popup.js"></script>
+  </body>
+</html>
